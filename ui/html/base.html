@@ -1,0 +1,25 @@
+{{define "base"}}
+<!doctype html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <title>{{template "title" .}}LAIN</title>
+        <link rel='shortcut icon' href ='/static/img/favicon.ico' type='image/x-icon'>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    </head>
+    <body>
+
+        <header>
+            <h1><a href='/'>lain</a></h1>
+        </header>
+        {{template "homenav" .}}
+        {{template "UserView"}}
+        <main>
+            {{template "main" .}}
+        </main>
+        <footer>
+            Powered by <a href='http://golang.org/'>Go</a>
+        </footer>
+    </body>
+</html>
+{{end}}
